@@ -12,10 +12,16 @@
 
 // ------------------------------------
 // single bus - static
+// var locations = getBusLocations();
+// var bus = locations.vehicle[4];
+// addMarkers(bus);
 // ------------------------------------
 // YOUR CODE
-
-
+// for (var i=0;i<locations.length;i++){
+// var locations = getBusLocations();
+// var bus = locations.vehicle[4];
+// addMarkers(bus);
+//}
 // ------------------------------------
 // all buses - static
 // ------------------------------------
@@ -23,6 +29,19 @@
 
 // ------------------------------------
 // all buses - timer
+var showBuses = function(){
+    var locations =getBusLocations();
+    var length = locations.vehicle.length;
+    var bus = null;
+    for (var i =0; i<length; i++){
+        bus = locations.vehicle[i];
+        addMarkers(bus);
+    }
+    console.log(new Date());
+
+};
+showBuses();
+setInterval(showBuses,15000);
 // ------------------------------------
 // YOUR CODE
 
